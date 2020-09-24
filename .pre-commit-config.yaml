@@ -1,6 +1,6 @@
 repos:
   - repo: https://github.com/Junte/pre-commit
-    rev: master
+    rev: 995d18ab06e48fbd561fe28fcc3024f70ff0cfa6
     hooks:
       - id: check-commit-message
         stages: [commit-msg]
