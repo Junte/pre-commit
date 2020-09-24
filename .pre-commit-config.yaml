@@ -1,6 +1,17 @@
+# repos:
+#   - repo: https://github.com/Junte/pre-commit
+#     rev: 6b03352d26843987aede2906f8f744f4d9fe79fe
+#     hooks:
+#       - id: check-commit-message
+#         stages: [commit-msg]
+
 repos:
-  - repo: https://github.com/Junte/pre-commit
-    rev: 6b03352d26843987aede2906f8f744f4d9fe79fe
+  - repo: local
     hooks:
-      - id: check-commit-message
-        stages: [commit-msg]
+    - id: check-commit-message-local
+      name: check-commit-message-local 
+      description: commit message should be good!
+      entry: '\A(?!\[#[\d]*\]\s[A-Z].+)'
+      args: [--multiline]
+      language: pygrep
+      stages: [commit-msg]
