@@ -1,0 +1,6 @@
+- id: check-commit-message
+  name: commit message should be good! 
+  description: check commit message for standard
+  entry: '^\[#[\d]*\]\s[A-Z].*'
+  args: [--multiline]
+  language: pygrep
