@@ -4,7 +4,7 @@ repos:
     - id: check-commit-message-local
       name: check-commit-message-local 
       description: Commit message should be in the format "[Add|Merge|Fix|Remove|Refactor|Change|Update] <text length between 10 and 80>"
-      entry: '\A(?!(Add|Merge|Fix|Remove|Refactor|Change|Update)\s.{10,80}\w$)'
+      entry: '\A(?!(Add|Merge|Fix|Remove|Refactor|Change|Update)\s.{8,80}\w$)'
       args: [--multiline]
       language: pygrep
       stages: [commit-msg]
