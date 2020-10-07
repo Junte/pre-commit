@@ -1,17 +1,9 @@
-# repos:
-#   - repo: https://github.com/alessandrojcm/commitlint-pre-commit-hook
-#     rev: v3.0.0
-#     hooks:
-#       - id: commitlint
-#         stages: [commit-msg]
-#         additional_dependencies: ['@commitlint/config-angular']
-
 repos:
   - repo: local
     hooks:
     - id: check-commit-message-local
       name: check-commit-message-local 
-      description: commit message should be good!
+      description: Commit message should be in the format "[Add|Merge|Fix|Remove|Refactor|Change|Update] <text length between 10 and 80>"
       entry: '\A(?!(Add|Merge|Fix|Remove|Refactor|Change|Update)\s.{10,80}\w$)'
       args: [--multiline]
       language: pygrep
