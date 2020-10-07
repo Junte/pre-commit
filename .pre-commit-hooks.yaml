@@ -1,6 +1,6 @@
 - id: check-commit-message
   name: check-commit-message
   description: commit message should be in the format "[#<task_id>*] [A-Z].+"
-  entry: '\A(?!\[#[\d]*\]\s[A-Z].+)'
+  entry: '\A(?!(Add|Merge|Fix|Remove|Refactor|Change|Update)\s.{10,80}\w$)'
   args: [--multiline]
   language: pygrep
