@@ -2,6 +2,5 @@
   name: check-commit-message
   description: Commit message should be in the format "[Add|Merge|Fix|Remove|Refactor|Change|Update] <text length between 10 and 256>"
   entry: \A(?!(Add|Merge|Fix|Remove|Refactor|Change|Update)\s.{8,}[\w'"!?]$)
-  # entry: \A(?!(Add|Merge|Fix|Remove|Refactor|Change|Update)\s.{8,256}[\w'"!?]$)
   args: [--multiline]
   language: pygrep
